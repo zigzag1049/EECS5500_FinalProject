@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body>
+	
+    <div class="weather-app">
+		<div class = "day">
+			<div>
+				<button style= "margin-right: 45;" id = "getIt" onclick = "previousDay()">Previous day</button>
+				<span id="currDay" >Monday</span>
+				<span id="location">Unknown</span>
+				<button style= "margin-left: 45;" id = "getIt" onclick = "nextDay()">Next Day</button><br>
+			</div>
+			<div class="left">
+				<div class="temperature">
+					<span id ="currOrAvgTemp">Current Temperature: </span><span id="temperature">0</span>&deg;<span>F</span><br>
+					<span>Low for today: </span><span id="temperatureMin">0</span>&deg;<span>F</span><br>
+					<span>High for today: </span><span id="temperatureMax">0</span>&deg;<span>F</span><br>
+					<span>Average humidity: <span id="humidity">0</span>%
+				</div> 
+			</div>	
+				<div class="right">
+					<div class="clouds">
+						<span>Forcast: </span><span id="cloud">Clear</span><br>
+						<img id="icon" width="50px" src="images/200.png" /><br>
+					</div>
+				</div>
+		 </div>
+    </div>
+  </body>
+</html>
