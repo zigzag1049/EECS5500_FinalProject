@@ -75,15 +75,15 @@ function getCurrentDate(day){
 		looking for the next day
 	*/
 	var dateObj = new Date();
-    var weekday = new Array(7);
-	// this probaly can be cleaned up tbh
-    weekday[0] = "Sunday";
-    weekday[1] = "Monday";
-    weekday[2] = "Tuesday";
-    weekday[3] = "Wednesday";
-    weekday[4] = "Thursday";
-    weekday[5] = "Friday";
-    weekday[6] = "Saturday";
+    var weekday = new Array(
+		"Sunday",
+		"Monday",
+		"Tuesday",
+		"Wednesday",
+		"Thursday",
+		"Friday",
+		"Saturday"
+	);
     var dayOfWeek = weekday[dateObj.getDay()];
 		
 	if(day == 0){ // current day
