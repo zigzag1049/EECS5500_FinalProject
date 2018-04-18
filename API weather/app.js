@@ -65,10 +65,10 @@ function update(weather,day) {
 	}	
 	tempMin.innerHTML = weather[day].tempDataMin;
 	tempMax.innerHTML = weather[day].tempDataMax;
-	currDate.innerHTML = getCurretDate(day);
+	currDate.innerHTML = getCurrentDate(day);
 }
 
-function getCurretDate(day){
+function getCurrentDate(day){
 	/* This function returns what day of the week it is
 		if the the user is looking at the current day, it will
 		return the day it will be in the future if the user is 
