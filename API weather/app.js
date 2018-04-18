@@ -33,7 +33,7 @@ function previousDay() {
 		update(weatherObj, --dayTrack);
 }
 function nextDay() {
-	if (dayTrack < 3)
+	if (dayTrack < 4)
 		update(weatherObj, ++dayTrack);
 }
 
