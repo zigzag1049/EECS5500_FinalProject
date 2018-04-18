@@ -28,17 +28,13 @@ window.onload = function () {
 	updateByZip(zip);
 }
 
-function previousDay(){
-	if(!(dayTrack <= 0)){
-		dayTrack--;
-		update(weatherObj,dayTrack);
-	}
+function previousDay() {
+	if (dayTrack > 0)
+		update(weatherObj, --dayTrack);
 }
-function nextDay(){
-	if(!(dayTrack >= 4)){
-		dayTrack++;
-		update(weatherObj,dayTrack);
-	}
+function nextDay() {
+	if (dayTrack < 3)
+		update(weatherObj, ++dayTrack);
 }
 
 function updateByZip(zip){
