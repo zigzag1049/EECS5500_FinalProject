@@ -71,7 +71,7 @@ function getCurrentDate(day){
 		looking for the next day
 	*/
 	var dateObj = new Date();
-    var weekday = new Array(
+    var weekdayNames = new Array(
 		"Sunday",
 		"Monday",
 		"Tuesday",
@@ -80,18 +80,7 @@ function getCurrentDate(day){
 		"Friday",
 		"Saturday"
 	);
-    var dayOfWeek = weekday[dateObj.getDay()];
-		
-	if(day == 0){ // current day
-		return dayOfWeek;
-	}else{ // day in the furtre
-		for(i =0;i< 7;i++){
-			if(dayOfWeek == weekday[i]){
-				return weekday[i+day]
-			}
-		}		
-		return dayOfWeek;
-	}		
+	return weekdayNames[ (dateObj.getDay()+day) % 7 ];
 }
 
 
