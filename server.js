@@ -35,7 +35,6 @@ function sendFileContent(response, fileName, contentType) {
          }
       });
    }
-   response.end();
 }
 
 http.createServer(function(request, response) {
