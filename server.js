@@ -12,7 +12,7 @@ includes.compile();
 
 const FILETYPES = {
    "html":  "text/html",
-   "shtml": "text/html",
+   //"shtml": "text/html",
    "css":   "text/css",
    "js":    "text/javascript",
    "jpg":   "image/jpeg",
@@ -30,7 +30,9 @@ function sendFileContent(response, fileName, contentType) {
       response.write("Server error");
       response.end();
    } else {
-      fs.readFile(".ssi/" + fileName, function(err, data) {
+      if (contentType == "text/html")
+         fileName = ".ssi/" + fileName;
+      fs.readFile(fileName, function(err, data) {
          if (err) {
             response.writeHead(404);
             response.write("Not Found!");
