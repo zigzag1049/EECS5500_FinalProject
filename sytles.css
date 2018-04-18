@@ -1,27 +1,36 @@
 .nav{
     width: 100%;
-    height: 150px;
-    border: 3px solid black;
+    height: 7%;
+    border: 1px solid black;
     border-radius: 15px;
     box-shadow: 2px 2px 50px #888888;
     text-align:center;
     font-family: "Mono";
 }
-.nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #333;
+.nav_options{
+    width: 50%;
+	float: right;
+    height: 100%;
+    border-radius: 15px;
+    text-align:center;
+    font-family: "Mono";
 }
 
-.nav li {
-    float: left;
+.weather{
+	width: 50%;
+	float: left;
+    height: 100%;
+    border-radius: 15px;
+    text-align:center;
+    font-family: "Mono";
+	
 }
 
-.nav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+.main{
+    position:absolute;
+    top: 50px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    overflow-y:scroll;        
+}​
