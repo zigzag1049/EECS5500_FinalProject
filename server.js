@@ -24,14 +24,17 @@ function getMIMEType(url) {
    return FILETYPES[url.match(/\/(?:[a-zA-Z0-9\/]*\.)*([a-z]*)$/)[1]];
 }
 
-function sendFileContent(response, fileName, contentType) {
+function sendFileContent(response, fileName) {
+   var contentType = getMIMEType(fileName);
    if (contentType == null) {
       response.writeHead(500);
       response.write("Server error");
       response.end();
    } else {
       if (contentType == "text/html")
-         fileName = ".ssi/" + fileName;
+         fileName = ".ssi" + fileName;
+      else
+         fileName = "." + fileName;
       fs.readFile(fileName, function(err, data) {
          if (err) {
             response.writeHead(404);
@@ -57,6 +60,5 @@ http.createServer(function(request, response) {
       });
    }
 
-   console.log(getMIMEType(request.url));
-   sendFileContent(response, request.url.substring(1), getMIMEType(request.url));
+   sendFileContent(response, request.url);
 }).listen(3000);
