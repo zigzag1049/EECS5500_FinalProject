@@ -11,7 +11,7 @@ const FILETYPES = {
 };
 
 function getMIMEType(url) {
-  return FILETYPES[url.match(/^\/[a-zA-Z0-9\/]*.([a-z]*)$/)[1]];
+  return FILETYPES[url.match(/\/(?:[a-zA-Z0-9\/]*\.)*([a-z]*)$/)[1]];
 }
 
 http.createServer(function(request, response) {
