@@ -84,13 +84,14 @@ function getCurrentDate(day){
 }
 
 
-function sendRequest(url){
+function sendRequest(url) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
-		if (xmlhttp.readyState == 4 && xmlhttp.status == 200 ) {
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 			var data = JSON.parse(xmlhttp.responseText);
 			var loopCountSpec = 0;
-			for (i = 0; i < 5; i++) { // these statements below get data from API
+			for (var i = 0; i < data.forecast.forecastday.length; i++) {
+				// these statements below get data from API
 				weatherObj[i] = {
 					code: data.forecast.forecastday[i].day.condition.icon, // code for picture
 					clouds: data.forecast.forecastday[i].day.condition.text,
@@ -100,9 +101,9 @@ function sendRequest(url){
 					tempDataAvg: data.forecast.forecastday[i].day.avgtemp_f,
 					tempDataMin: data.forecast.forecastday[i].day.mintemp_f,
 					tempDataMax: data.forecast.forecastday[i].day.maxtemp_f
-				}
+				};
 			}
-			update(weatherObj,0);
+			update(weatherObj, 0);
 		}
     };
 
