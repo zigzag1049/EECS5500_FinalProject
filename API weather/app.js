@@ -1,7 +1,7 @@
 
 var APPID = "472a0ccb4d2b4145877165300181604"; //Old api code through open weathemap-"6dc253026a1f4224464386df48b23e9d";
 var dayTrack = 0;
-var weatherObj = [weatherDay1={}, weatherDay2={},weatherDay3={}, weatherDay4={},weatherDay5={}];
+var weatherObj = [];
 var tempCurr;
 var tempMin;
 var tempMax;
@@ -91,14 +91,16 @@ function sendRequest(url){
 			var data = JSON.parse(xmlhttp.responseText);
 			var loopCountSpec = 0;
 			for (i = 0; i < 5; i++) { // these statements below get data from API
-				weatherObj[i].code = data.forecast.forecastday[i].day.condition.icon; // code for picture
-				weatherObj[i].clouds = data.forecast.forecastday[i].day.condition.text;				
-				weatherObj[i].humidity = data.forecast.forecastday[i].day.avghumidity;
-				weatherObj[i].location = data.location.name+ ", " + data.location.region;
-				weatherObj[i].tempDataCurr = data.current.temp_f;
-				weatherObj[i].tempDataAvg = data.forecast.forecastday[i].day.avgtemp_f
-				weatherObj[i].tempDataMin = data.forecast.forecastday[i].day.mintemp_f;
-				weatherObj[i].tempDataMax = data.forecast.forecastday[i].day.maxtemp_f;
+				weatherObj[i] = {
+					code: data.forecast.forecastday[i].day.condition.icon, // code for picture
+					clouds: data.forecast.forecastday[i].day.condition.text,
+					humidity: data.forecast.forecastday[i].day.avghumidity,
+					location: data.location.name + ", " + data.location.region,
+					tempDataCurr: data.current.temp_f,
+					tempDataAvg: data.forecast.forecastday[i].day.avgtemp_f,
+					tempDataMin: data.forecast.forecastday[i].day.mintemp_f,
+					tempDataMax: data.forecast.forecastday[i].day.maxtemp_f
+				}
 			}
 			update(weatherObj,0);
 		}
