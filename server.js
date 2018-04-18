@@ -1,6 +1,15 @@
 var http = require("http");
 var fs = require("fs");
 
+var ssi = require("ssi");
+
+var inputDirectory = "./";
+var outputDirectory = "./.ssi/";
+var matcher = "/**/*.html";
+
+var includes = new ssi(inputDirectory, outputDirectory, matcher);
+includes.compile();
+
 const FILETYPES = {
    "html":  "text/html",
    "shtml": "text/html",
@@ -21,7 +30,7 @@ function sendFileContent(response, fileName, contentType) {
       response.write("Server error");
       response.end();
    } else {
-      fs.readFile(fileName, function(err, data) {
+      fs.readFile(".ssi/" + fileName, function(err, data) {
          if (err) {
             response.writeHead(404);
             response.write("Not Found!");

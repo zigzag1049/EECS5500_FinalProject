@@ -1,2 +1,6 @@
 # EECS5500_FinalProject
-EECS 5500 FinalProject
+
+## Installation
+Before running, run:
+
+`npm install ssi -g`
