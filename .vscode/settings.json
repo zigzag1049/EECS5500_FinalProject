@@ -1,6 +1,6 @@
 {
     "files.associations": {
-        "*.html.txt": "html"
+        "*.html.inc": "html"
     },
     "editor.tabSize": 3,
     "[html]": {
