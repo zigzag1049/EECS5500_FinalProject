@@ -12,7 +12,16 @@
     font-family: "Mono";
 }
 h4{
-  line-height: 15px; 
+  line-height: 20px; 
+}
+.rideDesc button{
+	border-radius: 20px;
+	background-color: #6495ED ;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	box-shadow: 15px 10px 50px #888888;
+	border: 1px solid black;
+	
 }
 
 .singleRide{
