@@ -68,4 +68,6 @@ div.ridePic{
 
 iframe {
     border: 0 none;
+    width: 800px;
+    height: 450px;
 }
