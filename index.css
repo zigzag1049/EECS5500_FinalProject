@@ -8,8 +8,6 @@ img {
 }
 
 #wrapper {
-    position: absolute;
-    overflow-y: scroll;  
     font-family: arial;
     width: 100%;
     max-width: 1000px;
