@@ -1,14 +1,9 @@
 
-var APPID = "472a0ccb4d2b4145877165300181604"; //Old api code through open weathemap-"6dc253026a1f4224464386df48b23e9d";
+var APPID = "472a0ccb4d2b4145877165300181604";
 var dayTrack = 0;
 var weatherObj = [];
-var tempCurr;
-var tempMin;
-var tempMax;
-var loc;
-var icon;
-var cloud;
-var humidity;
+var tempCurr, tempMin, tempMax;
+var loc, icon, cloud, humidity;
 var currDate;
 
 window.onload = function () {
@@ -22,7 +17,7 @@ window.onload = function () {
     humidity = document.getElementById("humidity");
 	currDate = document.getElementById("currDay");
 	
-	//43606 -toledo
+	//43606 - toledo
 	//43065 - columbus
 	var zip = 43606;
 	updateByZip(zip);
@@ -40,7 +35,7 @@ function nextDay() {
 function updateByZip(zip){
 	var url = "http://api.apixu.com/v1/forecast.json?" +
 	"key=" + APPID +
-	"&q=" + zip + "&days=5";
+	"&q="  + zip   + "&days=5";
     sendRequest(url);
 }
 
@@ -48,10 +43,12 @@ function update(weather,day) {
 	/* This function updates the current html elements with
 		the update to dat data for API
 	*/
+	
 	icon.src = "http:" + weather[day].code;
 	cloud.innerHTML = weather[day].clouds;
     humidity.innerHTML = weather[day].humidity;
-    loc.innerHTML = weather[day].location;	
+    loc.innerHTML = weather[day].location;
+	
 	if(day ==0){ // if its the current day display current temp
 		tempCurrOrAvg.innerHTML = "Current Temperature: ";
 		tempCurr.innerHTML = weather[day].tempDataCurr;
@@ -72,13 +69,7 @@ function getCurrentDate(day){
 	*/
 	var dateObj = new Date();
     var weekdayNames = new Array(
-		"Sunday",
-		"Monday",
-		"Tuesday",
-		"Wednesday",
-		"Thursday",
-		"Friday",
-		"Saturday"
+		"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
 	);
 	return weekdayNames[ (dateObj.getDay()+day) % 7 ];
 }
