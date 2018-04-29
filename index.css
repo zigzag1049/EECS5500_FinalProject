@@ -14,7 +14,7 @@ img {
     margin: 0 auto;
 }
 
-header {
+#header-bar {
    background-color: #FF5500;
    overflow-y: scroll;  
 }
