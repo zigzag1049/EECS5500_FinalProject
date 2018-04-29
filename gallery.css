@@ -1,4 +1,4 @@
-.rideArea {
+div.rideArea {
 	background-color: #F0FFFF;
 	margin: auto;
 	width: 75%;
@@ -14,7 +14,7 @@
 h4{
   line-height: 20px; 
 }
-.rideDesc button{
+div.rideDesc button{
 	border-radius: 20px;
 	background-color: #6495ED ;
 	margin-top: 2%;
@@ -24,7 +24,7 @@ h4{
 	
 }
 
-.singleRide{
+div.singleRide{
 	background-color: yellow;
 	margin: 10px;
 	width: 20%;
@@ -32,7 +32,12 @@ h4{
     border: 2px solid black;
     border-radius: 20px;
     overflow: hidden;
-    font-family: "Mono";	
+    font-family: "Mono";
+    float: left;	
+}
+
+div.singleRide:hover {
+    border-color: red;
 }
 
 .rideDesc{
