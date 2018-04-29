@@ -3,9 +3,11 @@
   <head>
 	  <meta charset="utf-8"> 
     <title>Rides</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
     <link rel="stylesheet" type="text/css" href="gallery.css" />
   </head>
   <body>
+    <!--#include virtual="includes/menu.html.inc" -->
     <div class="rideArea">
 		<div id ="Twisty_Tyrant" onmouseover="mouseOver(0)" onmouseout="mouseOut()" class="singleRide" style="float: left;">
 			<div id ="Twisty_Tyrant_pic" class ="ridePic">
@@ -28,7 +30,7 @@
 			</div>
 		</div>
 		<div id ="Loopy_Log" onmouseover="mouseOver(1)" onmouseout="mouseOut()" class="singleRide" style="float: left;">
-			<div id ="Millennium_Force_pic" class ="ridePic">
+			<div id ="Loopy_Log_pic" class ="ridePic">
 				<img src="img/Millennium_Force.jpg" alt="Loopy Log">
 			</div>
 			
@@ -155,25 +157,28 @@
 		</div>		
     </div>
 	<script>
-	var listOfRides = ["Twisty_Tyrant","Loopy_Log", "Winds_of_Change","Space_Race","Techno_Torando","Devilish_Derby", "Seagram's_escape", "Night_Train"];
+	var listOfRides = [
+    "Twisty_Tyrant", "Loopy_Log", "Winds_of_Change", "Space_Race",
+    "Techno_Torando", "Devilish_Derby", "Seagram's_escape", "Night_Train"
+  ];
 	
 	function mouseOver(rideNum) {
-		for (i = 0; i < listOfRides.length; i++) {
-			if( i == rideNum){
+		for (var i = 0; i < listOfRides.length; i++) {
+			if (i == rideNum){
 				document.getElementById(listOfRides[i]).style.border = "2px solid red";
 			}
 		}
-		
-	}
+  }
+  
 	function mouseOut() {
-		for (i = 0; i < listOfRides.length; i++) {
+		for (var i = 0; i < listOfRides.length; i++) {
 			document.getElementById(listOfRides[i]).style.border = "2px solid black";
 		}
 	}
 	
 	function displayRideInfo(rideNum){
-		if(rideNum == -1){// go back to dispaling all rides, this means the user is on onr ride
-			for (i = 0; i < listOfRides.length; i++) {
+		if (rideNum == -1){// go back to dispaling all rides, this means the user is on onr ride
+			for (var i = 0; i < listOfRides.length; i++) {
 				document.getElementById(listOfRides[i]).style.display = "block";
 				document.getElementById(listOfRides[i]).style.height = "45%";
 				document.getElementById(listOfRides[i]).style.width = "20%";
@@ -182,7 +187,7 @@
 				document.getElementById(listOfRides[i]+"_desc").style.display = "none";
 			}
 		}else{
-			for (i = 0; i < listOfRides.length; i++) {
+			for (var i = 0; i < listOfRides.length; i++) {
 				if( i != rideNum){
 					document.getElementById(listOfRides[i]).style.display = "none";
 				}
@@ -191,7 +196,8 @@
 			document.getElementById(listOfRides[rideNum]).style.width = "95%";
 			document.getElementById(listOfRides[rideNum]+"_pic").style.height = "25%";
 			document.getElementById(listOfRides[rideNum]+"_pic").style.width = "25%";
-			document.getElementById(listOfRides[rideNum]+"_desc").style.display = "block";
+      document.getElementById(listOfRides[rideNum]+"_desc").style.display = "block";
+    }
 	}
 	</script>
   </body>
