@@ -7,7 +7,10 @@
     text-align: center;
     font-family: "Mono";
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5d68e8189ef0156ea53c9ab5f1ee73760263305c
 .nav_options {
     width: 50%;
     float: right;
@@ -18,8 +21,13 @@
 }
 
 .weather {
+<<<<<<< HEAD
     width: 50%;
     float: left;
+=======
+	width: 50%;
+	float: left;
+>>>>>>> 5d68e8189ef0156ea53c9ab5f1ee73760263305c
     height: 100%;
     border-radius: 15px;
     text-align: center;
@@ -27,6 +35,7 @@
 
 }
 
+<<<<<<< HEAD
 .main {
     position: absolute;
     top: 50px;
@@ -95,3 +104,9 @@ li2 a {
 li2 a:hover:not(.active) {
     background-color: #0033FF;
 }
+=======
+.main-navigation {
+    position:absolute;
+    overflow-y:scroll;        
+}​
+>>>>>>> 5d68e8189ef0156ea53c9ab5f1ee73760263305c

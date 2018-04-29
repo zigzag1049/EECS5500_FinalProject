@@ -1,17 +1,18 @@
 .weather-app {
     margin: auto;
-    width: 500px;
-    height: 110px;
+    width: 100%;
+    height: 100%;
     border: 3px solid black;
     border-radius: 20px;
     box-shadow: 10px 10px 50px #888888;
     overflow: hidden;
     text-align:center;
     font-family: "Mono";
+    box-sizing: border-box;
 }
 .day{
-    width: 500px;
-    height: 110px;
+    width: 100%;
+    height: 100%;
 	font-weight: bold;
 	background: #669999;
     border: 1px solid black;
@@ -24,7 +25,7 @@
     float: left;
     background: #8FBC8F;
     padding:2px;
-    width:225px;
+    width:55%;
     height:100%;
     color:white;
 }
