@@ -49,3 +49,12 @@ h4{
 .verticalLine {
     border-left: thick solid #ff0000;
 }
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+iframe {
+    border: 0 none;
+}
