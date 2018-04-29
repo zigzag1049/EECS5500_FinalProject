@@ -19,6 +19,8 @@ header {
 }
 
 #main-navigation {
+    position: absolute;
+    overflow-y: scroll;   
     width: 980px; 
     margin: 0 auto;
     padding: 5px;
