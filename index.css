@@ -12,11 +12,12 @@ img {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    overflow-y: scroll; 
 }
 
 header {
-   background-color: #FF5500; 
+   background-color: #FF5500;
+   position:absolute;
+   overflow-y:scroll;
 }
 
 #main-navigation { 
