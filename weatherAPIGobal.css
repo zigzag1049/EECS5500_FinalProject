@@ -1,0 +1,11 @@
+iframe{
+    margin-left: 15%;
+    width: 600px;
+    height: 140px;
+    border: 0 none;
+    
+}
+
+#weatherAPI{
+    display: inline-block;
+}
