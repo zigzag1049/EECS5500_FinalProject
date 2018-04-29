@@ -143,9 +143,6 @@ iframe{
     width: 600px;
     height: 140px;
     border: 0 none;
+    background-color: #FF5500;
     
-}
-
-#weatherAPI{
-    display: inline-block;
 }
