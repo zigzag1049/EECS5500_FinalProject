@@ -8,6 +8,8 @@ img {
 }
 
 #wrapper {
+    position: absolute;
+    overflow-y: scroll;  
     font-family: arial;
     width: 100%;
     max-width: 1000px;
@@ -18,9 +20,7 @@ header {
    background-color: #FF5500;
 }
 
-#main-navigation {
-    position: absolute;
-    overflow-y: scroll;   
+#main-navigation { 
     width: 980px; 
     margin: 0 auto;
     padding: 5px;
