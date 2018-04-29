@@ -20,8 +20,15 @@ const FILETYPES = {
    "gif":   "image/gif"
 };
 
+const FILEMATCH = /\/(?:[a-zA-Z0-9\/\-\_]*\.)*([a-z]*)$/;
+
 function getMIMEType(url) {
-   return FILETYPES[url.match(/\/(?:[a-zA-Z0-9\/]*\.)*([a-z]*)$/)[1]];
+   var match = url.match(FILEMATCH);
+   if (match != null)
+      return FILETYPES[match[1]];
+   else
+      console.error(`Cannot get filetype of ${url}.`);
+      return "";
 }
 
 function sendFileContent(response, fileName) {
