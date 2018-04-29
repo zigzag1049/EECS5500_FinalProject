@@ -154,6 +154,7 @@ input[type=submit]:hover{
 
 input[type=submit]:active{
     background-color: #d66f00;
+<<<<<<< HEAD
 =======
 body {
     margin: 0px;
@@ -311,4 +312,17 @@ input[type=submit]:hover{
 input[type=submit]:active{
     background-color: #d66f00;
 >>>>>>> 5d68e8189ef0156ea53c9ab5f1ee73760263305c
+=======
+}
+iframe{
+    margin-left: 15%;
+    width: 600px;
+    height: 140px;
+    border: 0 none;
+    
+}
+
+#weatherAPI{
+    display: inline-block;
+>>>>>>> master
 }
