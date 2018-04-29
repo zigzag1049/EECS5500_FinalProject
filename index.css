@@ -16,6 +16,8 @@ img {
 
 header {
    background-color: #FF5500;
+   position: absolute;
+   overflow-y: scroll;  
 }
 
 #main-navigation { 
