@@ -6,7 +6,7 @@
     height: 75%;
     border: 3px solid black;
     border-radius: 20px;
-    box-shadow: 10px 10px 50px #888888;
+    box-shadow: 10px 10px 50px white;
     overflow: hidden;
     text-align:center;
     font-family: "Mono";
@@ -19,13 +19,13 @@ h4{
 	background-color: #6495ED ;
 	margin-top: 2%;
 	margin-bottom: 2%;
-	box-shadow: 15px 10px 50px #888888;
+	box-shadow: 15px 10px 50px green;
 	border: 1px solid black;
 	
 }
 
 .singleRide{
-	background-color: lightblue;
+	background-color: yellow;
 	margin: 10px;
 	width: 20%;
     height: 45%;
