@@ -24,8 +24,8 @@ window.onload = function () {
 function login(){
    // The userName is mike, austin or tei 
    // The password is EECSRULEZ
-   var username = document.getElementById("Username").value;
-   var password = document.getElementById("Password").value;
+   var username = document.getElementById("username").value;
+   var password = document.getElementById("password").value;
 
    if(username == "mike"){
       if(password == "EECSRULEZ"){
