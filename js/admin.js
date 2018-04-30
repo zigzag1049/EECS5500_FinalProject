@@ -6,7 +6,7 @@ window.onload = function () {
    if (!localStorage.dailyAdminSeniorPrice)
       localStorage.dailyAdminSeniorPrice = 25;
    if (!localStorage.seasonPassPrice)
-      localStorage.seasonPassPrice       = 365;
+      localStorage.seasonPassPrice       = 360;
    document.getElementById("DAP").value = localStorage.dailyAdminAdultPrice;
    document.getElementById("DAC").value = localStorage.dailyAdminChildPrice;
    document.getElementById("DAS").value = localStorage.dailyAdminSeniorPrice;
