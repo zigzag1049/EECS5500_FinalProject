@@ -15,9 +15,13 @@ window.onload = function () {
    document.getElementById("ChildPass").innerHTML  = localStorage.dailyAdminChildPrice;
    document.getElementById("SeniorPass").innerHTML = localStorage.dailyAdminSeniorPrice;
    document.getElementById("SeasonPass").innerHTML = localStorage.seasonPassPrice;
+
+   document.getElementById("login").onclick = login;
+   for (var i = 0; i < document.getElementsByClassName("priceChg").length; i++)
+      document.getElementsByClassName("priceChg")[i].onclick = changePrice;
 }
 
-function Login(){
+function login(){
    // The userName is mike, austin or tei 
    // The password is EECSRULEZ
    var username = document.getElementById("Username").value;
@@ -35,30 +39,26 @@ function Login(){
    }
 }
 
-function changePrice(typeOfticket) {
+function changePrice(e) {
    if(typeof(Storage) !== "undefined") {
-      if(typeOfticket == 0){
-            if (localStorage.dailyAdminAdultPrice) {
+      if (e.target.id == "adultBtn") {
+            if (localStorage.dailyAdminAdultPrice)
                localStorage.dailyAdminAdultPrice =  document.getElementById("DAP").value;
-            }
             document.getElementById("AdultPass").innerHTML = localStorage.dailyAdminAdultPrice;
       
-      }else if(typeOfticket == 1){
-            if (localStorage.dailyAdminChildPrice) {
+      } else if (e.target.id == "childBtn") {
+            if (localStorage.dailyAdminChildPrice)
                localStorage.dailyAdminChildPrice =  document.getElementById("DAC").value;
-            }
             document.getElementById("ChildPass").innerHTML = localStorage.dailyAdminChildPrice;
       
-      }else if(typeOfticket == 2){
-            if (localStorage.dailyAdminSeniorPrice) {
+      } else if (e.target.id == "seniorBtn") {
+            if (localStorage.dailyAdminSeniorPrice)
                localStorage.dailyAdminSeniorPrice =  document.getElementById("DAS").value;
-            }
             document.getElementById("SeniorPass").innerHTML = localStorage.dailyAdminSeniorPrice;
       
-      }else if(typeOfticket == 3){
-            if (localStorage.seasonPassPrice) {
+      } else if (e.target.id == "seasonBtn") {
+            if (localStorage.seasonPassPrice)
                localStorage.seasonPassPrice =  document.getElementById("SP").value;
-            }
             document.getElementById("SeasonPass").innerHTML = localStorage.seasonPassPrice;  
       }
    } else {

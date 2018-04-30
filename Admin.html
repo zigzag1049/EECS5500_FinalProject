@@ -14,28 +14,28 @@
             <h1>Enter Username and Password!</h1>
             <input type="text" id="Username"  value="username">
             <input type="text" id="Password"  value="password">
-            <p><button onclick="Login()" type="button">Login</button></p>
+            <p><button type="button" id="login">Login</button></p>
             <div id= "wrongLogin"></div>
         </div>
         <div id = "changePrice" class = "changePrice">
             <h4>Change Daily Admission Price for an adult:</h4>
             <input type="number" id="DAP" />
-            <button onclick="changePrice(0)" type="button">Change Price!</button><p></p>
+            <button type="button" id="adultBtn" class="priceChg">Change Price!</button><p></p>
             <div>The price of this ticket is $<span id="AdultPass"></span>.</div><hr>
 
             <h4>Change Daily Admission Price for a child:</h4>
             <input type="number" id="DAC" />
-            <button onclick="changePrice(1)" type="button">Change Price!</button><p></p>
+            <button type="button" id="childBtn" class="priceChg">Change Price!</button><p></p>
             <div>The price of this ticket is $<span id="ChildPass"></span>.</div><hr>
 
             <h4>Change Daily Admission Price for a senior:</h4>
             <input type="number" id="DAS" />
-            <button onclick="changePrice(2)" type="button">Change Price!</button><p></p>
+            <button type="button" id="seniorBtn" class="priceChg">Change Price!</button><p></p>
             <div>The price of this ticket is $<span id="SeniorPass"></span>.</div><hr>
 
             <h4>Change Season Pass Price:</h4>
             <input type="number" id="SP" />
-            <button onclick="changePrice(3)" type="button">Change Price!</button><p></p>
+            <button type="button" id="seasonBtn" class="priceChg">Change Price!</button><p></p>
             <div>The price of this ticket is $<span id="SeasonPass"></span>.</div><hr>
         </div>
         <br><br/>
