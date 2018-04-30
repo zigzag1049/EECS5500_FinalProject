@@ -72,3 +72,9 @@ iframe {
     width: 800px;
     height: 450px;
 }
+
+.back {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
