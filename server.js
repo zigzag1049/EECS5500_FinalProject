@@ -1,6 +1,5 @@
 var http = require("http");
 var fs = require("fs");
-
 var ssi = require("ssi");
 
 var inputDirectory = "./";
@@ -12,7 +11,6 @@ includes.compile();
 
 const FILETYPES = {
    "html":  "text/html",
-   //"shtml": "text/html",
    "css":   "text/css",
    "js":    "text/javascript",
    "jpg":   "image/jpeg",
@@ -28,7 +26,7 @@ function getMIMEType(url) {
       return FILETYPES[match[1]];
    else
       console.error(`Cannot get filetype of ${url}.`);
-      return "";
+   return "";
 }
 
 function sendFileContent(response, fileName) {
@@ -66,6 +64,5 @@ http.createServer(function(request, response) {
          Location: "/index.html"
       });
    }
-
    sendFileContent(response, request.url);
 }).listen(3000);
