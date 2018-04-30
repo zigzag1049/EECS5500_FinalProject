@@ -1,48 +1,48 @@
 textarea {
-    color: #626262;
-    font-size: 15px;
-    resize: none;
-    width: 260px;
-	height: 30px;
-    border-radius: 4px;
-    padding: 4px;
-    margin: 5px 0 10px;
-    background-color:#dbdbdb;
+    color:            #626262;
+    font-size:        15px;
+    resize:           none;
+    width:            260px;
+	height:           30px;
+    border-radius:    4px;
+    padding:          4px;
+    margin:           5px 0 10px;
+    background-color: #dbdbdb;
 }
 
-textarea:focus, input:focus{
-    outline: none;
+textarea:focus, input:focus {
+    outline:          none;
     background-color: white;
-    color: #000;
+    color:            #000;
 }
 
 input {
-    color: #626262;
-    font-size: 15px;
-    border: 1px solid #dbdbdb;
-    border-radius: 4px;
-    width: 260px;
-    padding: 4px;
-    margin: 5px 0 10px;
+    color:            #626262;
+    font-size:        15px;
+    border:           1px solid #dbdbdb;
+    border-radius:    4px;
+    width:            260px;
+    padding:          4px;
+    margin:           5px 0 10px;
     background-color: #dbdbdb;
-	float: left;
+	float:            left;
 }
 
-input[type=submit]{
+input[type=submit] {
     background-color: #003698;
-    font-size: 24px;
-    color: white;
-    width: 100%;
-    height: 50px;
-    border-radius: 0px;
-    cursor: pointer;
+    font-size:        24px;
+    color:          white;
+    width:          100%;
+    height:         50px;
+    border-radius:  0px;
+    cursor:         pointer;
 }
 
-input[type=submit]:hover{
+input[type=submit]:hover {
     background-color: #004fdd;
 }
 
-input[type=submit]:active{
+input[type=submit]:active {
     background-color: #d66f00;
 }
 
