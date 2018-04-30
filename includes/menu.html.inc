@@ -1,14 +1,13 @@
 <header>
   <div id="wrapper">
-    <div id ="weatherAPI">
+    <div id="weatherAPI">
       <iframe src="APIweather/Weather.html"></iframe> 
     </div>
     <div id="google-map">
-        <iframe allowfullscreen
-          src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJX4yyNDZEOogRBuopvdvVXG0&amp;key=AIzaSyC-ZmtYfG8N0eNFcuYLUDWx6_tARbDCjJo">
-        </iframe>
-        
-      </div>	
+      <iframe allowfullscreen
+        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJX4yyNDZEOogRBuopvdvVXG0&amp;key=AIzaSyC-ZmtYfG8N0eNFcuYLUDWx6_tARbDCjJo">
+      </iframe>
+    </div>	
     <nav id="main-navigation">
       <ul>
         <li id="nav-title">Coaster Coast</li><!--
