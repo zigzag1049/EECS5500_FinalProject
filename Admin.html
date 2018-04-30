@@ -1,53 +1,40 @@
 <!doctype html>
 <html lang="en-us">
-  <head>
-	  <meta charset="utf-8"> 
-    <title>Rides</title>
-    <link rel="stylesheet" type="text/css" href="index.css" />
-		<link rel="stylesheet" type="text/css" href="gallery.css" />
-		<link rel="stylesheet" type="text/css" href="weatherAPIGobal.css" />
-    <script>
-      window.onload = function () {
-        localStorage.seasonPassPrice       = 1;
-        localStorage.dailyAdminAdultPrice  = 1;
-        localStorage.dailyAdminChildPrice  = 1;
-        localStorage.dailyAdminSeniorPrice = 1;
-
-
-        document.getElementById("SeasonPass").innerHTML = "The Price of this ticket is: $" + localStorage.seasonPassPrice;
-        document.getElementById("AdultPass").innerHTML = "The Price of this ticket is: $" + localStorage.seasonPassPrice;
-        document.getElementById("ChildPass").innerHTML = "The Price of this ticket is: $" + localStorage.seasonPassPrice;
-        document.getElementById("SeniorPass").innerHTML = "The Price of this ticket is: $" + localStorage.seasonPassPrice;
-
-      }
-      
-      function changePrice(typeOfticket) {
-          if(typeof(Storage) !== "undefined") {
-              if (localStorage.seasonPassPrice && typeOfticket ==0) {
-                  localStorage.seasonPassPrice = Number(localStorage.seasonPassPrice)+1;
-              } else {
-                  localStorage.seasonPassPrice = 1;
-              }
-              document.getElementById("SeasonPass").innerHTML = "You have clicked the button " + localStorage.seasonPassPrice + " time(s).";
-          } else {
-              document.getElementById("SeasonPass").innerHTML = "Sorry, your browser does not support web storage...";
-          }
-      }
-    </script>
+    <head>
+    	<meta charset="utf-8"> 
+        <title>Rides</title>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+	    <link rel="stylesheet" type="text/css" href="gallery.css" />
+        <link rel="stylesheet" type="text/css" href="weatherAPIGobal.css" />
+        <script type="text/javascript" src="admin.js" ></script>
     </head>
     <body>
       <!--#include virtual="includes/menu.html.inc" -->
-      <div class = changePrice>
-          <p><button onclick="changePrice(0)" type="button">Click me!</button></p>
-          <h3>Change Daily Admission Price, its currently at:</h3>
-          <div id="dailyAdmiss"></div>
-          <h3>Change Two Day Price, its currently at:</h3>
-          <div id="twoDay"></div>
-          <h3>Change Bring A Friend Price, its currently at:</h3>
-          <div id="bringAFri"></div>
-          <h3>Change Season Pass Price, its currently at:</h3>
-          <div id="SeasonPass"></div>
-      </div>
+        <div id = "login" class ="login">
+            <h1>Enter Username and Password!</h1>
+            <input type="text" id="Username"  value="username">
+            <input type="text" id="Password"  value="password">
+            <p><button onclick="Login()" type="button">Login</button></p>
+            <div id= "wrongLogin"></div>
+        </div>
+        <div id = "changePrice" class = "changePrice">
+            <h4>Change Daily Admission Price for an adult:</h4>
+            <input type="number" id="DAP"  value="45">
+            <button onclick="changePrice(0)" type="button">Change Price!</button><p></p>
+            <div id="AdultPass"></div><hr>
+            <h4>Change Daily Admission Price for a child:</h4>
+            <input type="number" id="DAC"  value="20">
+            <button onclick="changePrice(1)" type="button">Change Price!</button><p></p>
+            <div id="ChildPass"></div><hr>
+            <h4>Change Daily Admission Price for a senior:</h4>
+            <input type="number" id="DAS"  value="25">
+            <button onclick="changePrice(2)" type="button">Change Price!</button><p></p>
+            <div id="SeniorPass"></div><hr>
+            <h4>Change Season Pass Price:</h4>
+            <input type="number" id="SP"  value="365">
+            <button onclick="changePrice(3)" type="button">Change Price!</button><p></p>
+            <div id="SeasonPass"></div><hr>
+        </div>
+        <br><br/>
     </body>
-
   </html>

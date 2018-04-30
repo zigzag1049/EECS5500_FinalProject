@@ -113,8 +113,35 @@ li a {
 }
 
 #footer {
+<<<<<<< HEAD
     margin-top: 360px;
     margin-left: auto;
     margin-right: auto;
     display: inline-block;
+=======
+    margin-top: 720px;
+}
+
+.changePrice{
+    display: none;
+    margin-left: 5%;
+    Font-size: 20px;
+
+}
+.changePrice button{
+    background-color: #FF5500;
+    border: 3px solid black;
+    border-radius: 20px;
+    margin-left: 2%;
+    box-shadow: 5px 5px 25px #DEB887;
+}
+.login{
+    text-align: center;
+}
+.login button{
+    background-color: #FF5500;
+    border: 3px solid black;
+    border-radius: 20px;
+    box-shadow: 5px 5px 25px #DEB887;
+>>>>>>> michael
 }
