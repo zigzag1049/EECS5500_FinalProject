@@ -7,29 +7,58 @@
 		<link rel="stylesheet" type="text/css" href="gallery.css" />
 		<link rel="stylesheet" type="text/css" href="weatherAPIGobal.css" />
     <script>
-      window.onload = function () {
-        localStorage.seasonPassPrice       = 1;
-        localStorage.dailyAdminAdultPrice  = 1;
-        localStorage.dailyAdminChildPrice  = 1;
-        localStorage.dailyAdminSeniorPrice = 1;
+        window.onload = function () {
+            localStorage.seasonPassPrice       = 1;
+            localStorage.dailyAdminAdultPrice  = 1;
+            localStorage.dailyAdminChildPrice  = 1;
+            localStorage.dailyAdminSeniorPrice = 1;
 
 
-        document.getElementById("SeasonPass").innerHTML = "The Price of this ticket is: $" + localStorage.seasonPassPrice;
-        document.getElementById("AdultPass").innerHTML = "The Price of this ticket is: $" + localStorage.seasonPassPrice;
-        document.getElementById("ChildPass").innerHTML = "The Price of this ticket is: $" + localStorage.seasonPassPrice;
-        document.getElementById("SeniorPass").innerHTML = "The Price of this ticket is: $" + localStorage.seasonPassPrice;
-
-      }
+            
+            document.getElementById("AdultPass").innerHTML = "The Price of this ticket is: $" + localStorage.dailyAdminAdultPrice;
+            document.getElementById("ChildPass").innerHTML = "The Price of this ticket is: $" + localStorage.dailyAdminChildPrice;
+            document.getElementById("SeniorPass").innerHTML = "The Price of this ticket is: $" + localStorage.dailyAdminSeniorPrice;
+            document.getElementById("SeasonPass").innerHTML = "The Price of this ticket is: $" + localStorage.seasonPassPrice;
+        }
       
-      function changePrice(typeOfticket) {
-          if(typeof(Storage) !== "undefined") {
-              if (localStorage.seasonPassPrice && typeOfticket ==0) {
-                  localStorage.seasonPassPrice = Number(localStorage.seasonPassPrice)+1;
-              } else {
-                  localStorage.seasonPassPrice = 1;
-              }
-              document.getElementById("SeasonPass").innerHTML = "You have clicked the button " + localStorage.seasonPassPrice + " time(s).";
+        function changePrice(typeOfticket) {
+            if(typeof(Storage) !== "undefined") {
+                if(typeOfticket == 0){
+                    if (localStorage.dailyAdminAdultPrice) {
+                        localStorage.dailyAdminAdultPrice = Number(localStorage.dailyAdminAdultPrice)+1;
+                    } else {
+                        localStorage.dailyAdminAdultPrice = 1;
+                    }
+                    document.getElementById("AdultPass").innerHTML = "The Price of this ticket is: $" + localStorage.dailyAdminAdultPrice;
+                
+                }else if(typeOfticket == 1){
+                    if (localStorage.dailyAdminChildPrice) {
+                        localStorage.dailyAdminChildPrice = Number(localStorage.dailyAdminChildPrice)+1;
+                    } else {
+                        localStorage.dailyAdminChildPrice = 1;
+                    }
+                    document.getElementById("ChildPass").innerHTML = "The Price of this ticket is: $" + localStorage.dailyAdminChildPrice;
+                
+                }else if(typeOfticket == 2){
+                    if (localStorage.dailyAdminSeniorPrice) {
+                        localStorage.dailyAdminSeniorPrice = Number(localStorage.dailyAdminSeniorPrice)+1;
+                    } else {
+                        localStorage.dailyAdminSeniorPrice = 1;
+                    }
+                    document.getElementById("SeniorPass").innerHTML = "The Price of this ticket is: $" + localStorage.dailyAdminSeniorPrice;
+               
+                }else if(typeOfticket == 3){
+                    if (localStorage.seasonPassPrice) {
+                        localStorage.seasonPassPrice = Number(localStorage.seasonPassPrice)+1;
+                    } else {
+                        localStorage.seasonPassPrice = 1;
+                    }
+                    document.getElementById("SeasonPass").innerHTML = "The Price of this ticket is: $" + localStorage.seasonPassPrice;  
+                }
           } else {
+              document.getElementById("AdultPass").innerHTML = "Sorry, your browser does not support web storage...";
+              document.getElementById("ChildPass").innerHTML = "Sorry, your browser does not support web storage...";
+              document.getElementById("SeniorPass").innerHTML = "Sorry, your browser does not support web storage...";
               document.getElementById("SeasonPass").innerHTML = "Sorry, your browser does not support web storage...";
           }
       }
@@ -39,13 +68,14 @@
       <!--#include virtual="includes/menu.html.inc" -->
       <div class = changePrice>
           <p><button onclick="changePrice(0)" type="button">Click me!</button></p>
-          <h3>Change Daily Admission Price, its currently at:</h3>
-          <div id="dailyAdmiss"></div>
-          <h3>Change Two Day Price, its currently at:</h3>
+          <h4>Change Daily Admission Price for an adult, it's currently at:</h4>
+          <div id="AdultPass">
+          </div>
+          <h4>Change Daily Admission Price for a child, it's currently at:</h4>
           <div id="twoDay"></div>
-          <h3>Change Bring A Friend Price, its currently at:</h3>
+          <h4>Change Daily Admission Price for a senior, it's currently at:</h4>
           <div id="bringAFri"></div>
-          <h3>Change Season Pass Price, its currently at:</h3>
+          <h4>Change Season Pass Price, it's currently at:</h4>
           <div id="SeasonPass"></div>
       </div>
     </body>
