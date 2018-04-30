@@ -13,7 +13,7 @@
 				<ul>
 					<li style="float: left; color: white; padding-top: 6px; Font-weight: Bold; Font-size: 40px;">Coaster Coast</li>
 					<li><a href="index.html" class="others">Home</a></li>
-					<li><a href="ticket.html" class="current">BUY TICKET / PASSES</a></li>
+					<li><a href="tickets.html" class="current">BUY TICKET / PASSES</a></li>
 					<li><a href="gallery.html" class="others">GALLERY / VIDEO</a></li>
 					<li><a href="map.html" class="others">MAP</a></li>
 				</ul>
@@ -23,7 +23,7 @@
 	
 	<div id="wrapper">
         <div id="ticket-info">
-            <div id="adult-ticket" class="tickets">
+            <div id="daily-ticket" class="tickets">
 				<table style="width:100%; background-color: blue;">
 				  <tr>
 					<img id="daily-img" src="img/daily_pass.jpg" alt="daily_ticket">
@@ -39,17 +39,17 @@
 						<form name="daily-ticket" id="daily-form" class="ticket-form">
 							<span>Number of ticket purchace:</span>
 							<br>
-							<input type="number" value="0" min="0" name="Number">
+							<input type="number" value="0" min="0" name="daily-Number">
 							<br>
 							<span>Guest Name
 							<br>Please put one person's Name:
 							</span>
 							<br>
-							<input type="text" placeholder="first/last name" name="Names">
+							<input type="text" placeholder="first/last name" name="daily-Name">
 							<br>
 							<span>Enter your E-mail address:</span>
 							<br>
-							<textarea name="Message" rows="5" cols="20" placeholder="E-mail address"></textarea>
+							<textarea name="daily-Email" rows="5" cols="20" placeholder="E-mail address"></textarea>
 						</form>
 					<div>
 				  </tr>
@@ -70,17 +70,17 @@
 					<form name="2day-ticket" id="2day-form" class="ticket-form">
 						<span>Number of ticket purchace:</span>
 						<br>
-						<input type="number" value="0" min="0" name="Number">
+						<input type="number" value="0" min="0" name="2day-Number">
 						<br>
 						<span>Guest Name
 						<br>Please put one person's Name:
 						</span>
 						<br>
-						<input type="text" placeholder="first/last name" name="Names">
+						<input type="text" placeholder="first/last name" name="2day-Name">
 						<br>
 						<span>Enter your E-mail address:</span>
 							<br>
-							<textarea name="Message" rows="5" cols="20" placeholder="E-mail address"></textarea>
+							<textarea name="2day-Email" rows="5" cols="20" placeholder="E-mail address"></textarea>
 					</form>
 				<div>
 			  </tr>
@@ -101,17 +101,17 @@
 					<form name="friends-ticket" id="friends-form" class="ticket-form">
 						<span>Number of ticket purchace:</span>
 						<br>
-						<input type="number" value="0" min="0" name="adultNumber">
+						<input type="number" value="0" min="0" name="friends-Number">
 						<br>
 						<span>Guest Name
 						<br>Please put one person's Name:
 						</span>
 						<br>
-						<input type="text" placeholder="first/last name" name="adultNames">
+						<input type="text" placeholder="first/last name" name="friends-Name">
 						<br>
 						<span>Enter your E-mail address:</span>
 							<br>
-							<textarea name="adultMessage" rows="5" cols="20" placeholder="E-mail address"></textarea>
+							<textarea name="friends-Email" rows="5" cols="20" placeholder="E-mail address"></textarea>
 					</form>
 				<div>
 			  </tr>
@@ -132,17 +132,17 @@
 					<form name="season-ticket" id="season-form" class="ticket-form">
 						<span>Number of ticket purchace:</span>
 						<br>
-						<input type="number" value="0" min="0" name="adultNumber">
+						<input type="number" value="0" min="0" name="Season-Number">
 						<br>
 						<span>Guest Name
 						<br>Please put one person's Name:
 						</span>
 						<br>
-						<input type="text" placeholder="first/last name" name="adultNames">
+						<input type="text" placeholder="first/last name" name="Season-Name">
 						<br>
 						<span>Enter your E-mail address:</span>
 							<br>
-							<textarea name="adultMessage" rows="5" cols="20" placeholder="E-mail address"></textarea>
+							<textarea name="season-Email" rows="5" cols="20" placeholder="E-mail address"></textarea>
 					</form>
 				<div>
 			  </tr>
@@ -155,8 +155,8 @@
         </div>
 
     </div>
-    <script src="script/jquery-3.3.1.js"></script>
-    <script src="tickets.js"></script>
+    <script src="jquery-3.3.1.js"></script>
+    <script src="ticket.js"></script>
 </body>
 
 </html>
