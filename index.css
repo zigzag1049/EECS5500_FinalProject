@@ -1,6 +1,7 @@
 body {
     margin: 0px;
     background: lightgray;
+    text-align: center;
 }
 
 img {
@@ -58,9 +59,9 @@ header {
 }
 
 #banner {
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #banner p {
@@ -71,45 +72,18 @@ header {
     color: white;
     width: 100%;
     text-align: center;
-    position: absolute;
+    /* position: absolute; */
     top:20px;
 }
 
 .top {
     animation: intro1 1s forwards;
-    position: absolute;
-    opacity: 0;
+    position: relative;
 }
-
-.middle {
-    position: absolute;
-    transform: translateY(100px);
-    top: 200px;
-    animation: intro2 1s;
-}
-.bottom {
-    position: absolute;
-    transform: translateY(500px);
-    opacity: 0;
-    animation: intro3 1s 0.2s forwards;
-}
-
 
 @keyframes intro1 {
-    0% {transform: translateY(-100px); opacity:0}
-    50% {transform: translateY(-300px); opacity:50}
-    100% {transform: translateY(100px); opacity:100}
-}
-
-@keyframes intro2 {
-    0% {opacity:0}
-    100% {opacity:1}
-}
-
-@keyframes intro3 {
-    0% {transform: translateY(500px); opacity:0}
-    50% {transform: translateY(190px); opacity:0.7}
-    100% {transform: translateY(200px); opacity:1}
+    0% {transform: translateY(100px); opacity:0}
+    100% {transform: translateY(0px); opacity:100}
 }
 
 ul {
@@ -139,5 +113,8 @@ li a {
 }
 
 #footer {
-    margin-top: 720px;
+    margin-top: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
 }
