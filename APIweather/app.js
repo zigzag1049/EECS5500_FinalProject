@@ -72,7 +72,7 @@ function getCurrentDate(day){
       "Wednesday", "Thursday", "Friday",
       "Saturday"
    ];
-   day = dateObj.getDay + day;
+   day = dateObj.getDay() + day;
 	return weekdayNames[day % 7];
 }
 
