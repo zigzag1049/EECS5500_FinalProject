@@ -7,6 +7,13 @@ img {
     max-width: 100%;
 }
 
+#banner p#welcome {
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 #wrapper {
     font-family: arial;
     width: 100%;
