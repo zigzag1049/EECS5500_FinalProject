@@ -10,82 +10,81 @@
   <!--#include virtual="includes/menu.html.inc" -->
   <div id="wrapper">
     <div id="ticket-info">
-      <div class="tickets" id="adult-ticket">
-        <table style="width:100%;">
-          <tr>
-            <td><img alt="adult_ticket" id="adult-img" src="img/adult_ticket.jpg"></td>
-            <td style="padding-top: 30px; padding-left: 35px;">
-              <h2>ADULT TICKETS &nbsp;&nbsp; as low as $<span id="adultPrice">45</span>!</h2>
-              <p style="font-family:new times roman;">&nbsp;&nbsp;Discover the best tickets and biggest savings for your visit to COASTER COST! Enjoy all of our world-class rides and attractions including Steel Vengeance, the world's first and only hyper-hybrid record-breaking roller coaster.</p>
-            </td>
-            <td style="padding-top: 32px;">
-              <form class="adult-form" id="adult-form" name="adult-ticket">
-                <span>Number of ticket purchase:</span><br>
-                <input min="0" name="adult-Number" type="number" value="0"><br>
-                <span>Guest Name<br>
-                Please put one person's Name:</span><br>
-                <input name="adult-Name" placeholder="first/last name" type="text"><br>
-                <span>Enter your E-mail address:</span><br>
-                <textarea cols="20" name="adult-Email" placeholder="E-mail address" rows="5"></textarea>
-              </form>
-            </td>
-          </tr>
-          <tr>
-            <td><img alt="senior_ticket" id="senior-img" src="img/senior_ticket.jpg"></td>
-            <td style="padding-top: 30px; padding-left: 35px;">
-              <h2>SENIOR TICKET &nbsp;&nbsp; for only $<span id="seniorPrice">25</span>, tell yourself that you are still young!</h2>
-              <p style="font-family:new times roman;">&nbsp;&nbsp; Seniors enjoy visits to Coaster coast and Coaster coast take you to a brand new tour. You will feel youself as 25 years old with only $25 ticket!! It's up to you when you want to visit!</p>
-            </td>
-            <td style="padding-top: 32px;">
-              <form class="ticket-form" id="senior-form" name="senior-ticket">
-                <span>Number of ticket purchase:</span><br>
-                <input min="0" name="senior-Number" type="number" value="0"><br>
-                <span>Guest Name<br>
-                Please put one person's Name:</span><br>
-                <input name="senior-Name" placeholder="first/last name" type="text"><br>
-                <span>Enter your E-mail address:</span><br>
-                <textarea cols="20" name="senior-Email" placeholder="E-mail address" rows="5"></textarea>
-              </form>
-            </td>
-          </tr>
-          <tr>
-            <td><img alt="child_ticket" id="child-img" src="img/child_ticket.jpg"></td>
-            <td style="padding-top: 30px; padding-left: 35px;">
-              <h2>CHILD TICKETS&nbsp;&nbsp; for only $<span id="childPrice">20</span>!</h2>
-              <p style="font-family:new times roman;">&nbsp;&nbsp;Share in the fun and thrills any day with your family. Your childs will love the coaster feeling and have a wonderful day. Buy up to ten tickets per Passholder, per day.</p>
-            </td>
-            <td style="padding-top: 32px;">
-              <form class="ticket-form" id="child-form" name="child-ticket">
-                <span>Number of ticket purchase:</span><br>
-                <input min="0" name="child-Number" type="number" value="0"><br>
-                <span>Guest Name<br>
-                Please put one person's Name:</span><br>
-                <input name="child-Name" placeholder="first/last name" type="text"><br>
-                <span>Enter your E-mail address:</span><br>
-                <textarea cols="20" name="child-Email" placeholder="E-mail address" rows="5"></textarea>
-              </form>
-            </td>
-          </tr>
-          <tr>
-            <td><img alt="season_ticket" id="season-img" src="img/Season-ticket.png"></td>
-            <td style="padding-top: 30px; padding-left: 35px;">
-              <h2>SEASON PASS!!&nbsp;&nbsp; for only $<span id="seasonPrice">360</span>!</h2>
-              <p style="font-family:new times roman;">&nbsp;&nbsp;Includes unlimited visits to Cedar Point and Cedar Point Shores Water Park, free parking, special discounts, early ride times, exclusive ride nights, free Dinosaurs Alive and more!</p>
-            </td>
-            <td style="padding-top: 32px;">
-              <form class="ticket-form" id="season-form" name="season-ticket">
-                <span>Number of ticket purchase:</span><br>
-                <input min="0" name="adultNumber" type="number" value="0"><br>
-                <span>Guest Name<br>
-                Please put one person's Name:</span><br>
-                <input name="adultNames" placeholder="first/last name" type="text"><br>
-                <span>Enter your E-mail address:</span><br>
-                <textarea cols="20" name="adultMessage" placeholder="E-mail address" rows="5"></textarea>
-              </form>
-            </td>
-          </tr>
-        </table>
-      </div><input type="submit" value="Submit to purchase your ticket !">
+      <table id="tickets">
+				<tr>
+					<td><img alt="adult_ticket" id="adult-img" src="img/adult_ticket.jpg"></td>
+					<td>
+						<h2>ADULT TICKETS as low as $<span id="adultPrice">45</span>!</h2>
+						<p>Discover the best tickets and biggest savings for your visit to COASTER COAST! Enjoy all of our world-class rides and attractions including Steel Vengeance, the world's first and only hyper-hybrid record-breaking roller coaster.</p>
+					</td>
+					<td>
+						<form class="adult-form" id="adult-form" name="adult-ticket">
+							<span>Number of tickets:</span><br>
+							<input min="0" name="adult-Number" type="number" value="0"><br>
+							<span>Guest Name<br>
+							Please put one person's Name:</span><br>
+							<input name="adult-Name" placeholder="first/last name" type="text"><br>
+							<span>Enter your E-mail address:</span><br>
+							<textarea cols="20" name="adult-Email" placeholder="E-mail address" rows="5"></textarea>
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td><img alt="senior_ticket" id="senior-img" src="img/senior_ticket.jpg"></td>
+					<td>
+						<h2>SENIOR TICKETS for only $<span id="seniorPrice">25</span>; tell yourself that you are still young!</h2>
+						<p>Seniors enjoy visits to Coaster coast and Coaster coast take you to a brand new tour. You will feel youself as 25 years old with only $25 ticket!! It's up to you when you want to visit!</p>
+					</td>
+					<td>
+						<form class="ticket-form" id="senior-form" name="senior-ticket">
+							<span>Number of tickets:</span><br>
+							<input min="0" name="senior-Number" type="number" value="0"><br>
+							<span>Guest Name<br>
+							Please put one person's Name:</span><br>
+							<input name="senior-Name" placeholder="first/last name" type="text"><br>
+							<span>Enter your E-mail address:</span><br>
+							<textarea cols="20" name="senior-Email" placeholder="E-mail address" rows="5"></textarea>
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td><img alt="child_ticket" id="child-img" src="img/child_ticket.jpg"></td>
+					<td>
+						<h2>CHILD TICKETS for only $<span id="childPrice">20</span>!</h2>
+						<p>Share in the fun and thrills any day with your family. Your childs will love the coaster feeling and have a wonderful day. Buy up to ten tickets per Passholder, per day.</p>
+					</td>
+					<td>
+						<form class="ticket-form" id="child-form" name="child-ticket">
+							<span>Number of tickets:</span><br>
+							<input min="0" name="child-Number" type="number" value="0"><br>
+							<span>Guest Name<br>
+							Please put one person's Name:</span><br>
+							<input name="child-Name" placeholder="first/last name" type="text"><br>
+							<span>Enter your E-mail address:</span><br>
+							<textarea cols="20" name="child-Email" placeholder="E-mail address" rows="5"></textarea>
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td><img alt="season_ticket" id="season-img" src="img/Season-ticket.png"></td>
+					<td>
+						<h2>SEASON PASSES for only $<span id="seasonPrice">360</span>!</h2>
+						<p>Includes unlimited visits to Cedar Point and Cedar Point Shores Water Park, free parking, special discounts, early ride times, exclusive ride nights, free Dinosaurs Alive and more!</p>
+					</td>
+					<td>
+						<form class="ticket-form" id="season-form" name="season-ticket">
+							<span>Number of tickets:</span><br>
+							<input min="0" name="adultNumber" type="number" value="0"><br>
+							<span>Guest Name<br>
+							Please put one person's Name:</span><br>
+							<input name="adultNames" placeholder="first/last name" type="text"><br>
+							<span>Enter your E-mail address:</span><br>
+							<textarea cols="20" name="adultMessage" placeholder="E-mail address" rows="5"></textarea>
+						</form>
+					</td>
+				</tr>
+      </table>
+      <input type="submit" value="Submit to purchase your ticket!">
     </div>
   </div>
   <script src="js/jquery-3.3.1.js"></script>
