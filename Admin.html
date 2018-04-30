@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+	  <meta charset="utf-8"> 
+    <title>Rides</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+		<link rel="stylesheet" type="text/css" href="gallery.css" />
+		<link rel="stylesheet" type="text/css" href="weatherAPIGobal.css" />
+    <script>
+      window.onload = function () {
+        localStorage.seasonPassPrice       = 1;
+        localStorage.dailyAdminAdultPrice  = 1;
+        localStorage.dailyAdminChildPrice  = 1;
+        localStorage.dailyAdminSeniorPrice = 1;
+
+
+        document.getElementById("SeasonPass").innerHTML = "The Price of this ticket is: $" + localStorage.seasonPassPrice;
+        document.getElementById("AdultPass").innerHTML = "The Price of this ticket is: $" + localStorage.seasonPassPrice;
+        document.getElementById("ChildPass").innerHTML = "The Price of this ticket is: $" + localStorage.seasonPassPrice;
+        document.getElementById("SeniorPass").innerHTML = "The Price of this ticket is: $" + localStorage.seasonPassPrice;
+
+      }
+      
+      function changePrice(typeOfticket) {
+          if(typeof(Storage) !== "undefined") {
+              if (localStorage.seasonPassPrice && typeOfticket ==0) {
+                  localStorage.seasonPassPrice = Number(localStorage.seasonPassPrice)+1;
+              } else {
+                  localStorage.seasonPassPrice = 1;
+              }
+              document.getElementById("SeasonPass").innerHTML = "You have clicked the button " + localStorage.seasonPassPrice + " time(s).";
+          } else {
+              document.getElementById("SeasonPass").innerHTML = "Sorry, your browser does not support web storage...";
+          }
+      }
+    </script>
+    </head>
+    <body>
+      <!--#include virtual="includes/menu.html.inc" -->
+      <div class = changePrice>
+          <p><button onclick="changePrice(0)" type="button">Click me!</button></p>
+          <h3>Change Daily Admission Price, its currently at:</h3>
+          <div id="dailyAdmiss"></div>
+          <h3>Change Two Day Price, its currently at:</h3>
+          <div id="twoDay"></div>
+          <h3>Change Bring A Friend Price, its currently at:</h3>
+          <div id="bringAFri"></div>
+          <h3>Change Season Pass Price, its currently at:</h3>
+          <div id="SeasonPass"></div>
+      </div>
+    </body>
+
+  </html>
