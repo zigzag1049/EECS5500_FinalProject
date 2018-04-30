@@ -21,7 +21,8 @@ div.singleRide button{
 	margin-bottom: 2%;
 	box-shadow: 15px 10px 50px green;
 	border: 1px solid black;
-	
+    font-weight: bolder;
+    font-size: 1.17em;
 }
 
 div.singleRide{
