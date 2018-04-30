@@ -16,7 +16,7 @@
         --><li><a href="tickets.html" class="others">BUY TICKET / PASSES</a></li><!--
         --><li><a href="gallery.html" class="others">GALLERY / VIDEO</a></li><!--
         --><li><a href="https://maps.google.com/maps?ll=41.658,-83.6141&amp;z=17&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=embed" class="others">MAP</a></li><!--
-        --><li><a href="Admin.html" class="others">LOGIN</a></li>
+        --><li><a href="admin.html" class="others">LOGIN</a></li>
       </ul>
     </nav>
   </div>
