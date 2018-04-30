@@ -3,15 +3,15 @@
     <div id ="weatherAPI">
       <iframe src="APIweather/Weather.html"></iframe> 
     </div>
-    <div id="google-map" style = "display: inline-block;">
-        <iframe width="200" height="300" style="border: 2px black solid; margin-top: 2%; border-radius: 15px;" 
-          src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJX4yyNDZEOogRBuopvdvVXG0&amp;key=AIzaSyC-ZmtYfG8N0eNFcuYLUDWx6_tARbDCjJo" allowfullscreen>
+    <div id="google-map">
+        <iframe allowfullscreen
+          src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJX4yyNDZEOogRBuopvdvVXG0&amp;key=AIzaSyC-ZmtYfG8N0eNFcuYLUDWx6_tARbDCjJo">
         </iframe>
         
       </div>	
     <nav id="main-navigation">
       <ul>
-        <li style="float: left; color: white; padding-top: 6px; Font-weight: Bold; Font-size: 40px;">Coaster Coast</li><!--
+        <li id="nav-title">Coaster Coast</li><!--
         --><li><a href="index.html" class="others">HOME</a></li><!--
         --><li><a href="tickets.html" class="others">BUY TICKET / PASSES</a></li><!--
         --><li><a href="gallery.html" class="others">GALLERY / VIDEO</a></li><!--

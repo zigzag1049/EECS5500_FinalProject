@@ -105,12 +105,20 @@ li a {
 #weatherAPI {
     display: inline-block;
 }
+#google-map {
+    display: inline-block;
+}
 #weatherAPI iframe,
 #google-map iframe {
     margin-left: 5%;
     width: 600px;
     height: 140px;
     border: 0 none;
+}
+#google-map iframe {
+    border: 2px black solid;
+    margin-top: 2%;
+    border-radius: 15px;
 }
 
 #footer {
@@ -141,4 +149,12 @@ li a {
     border: 3px solid black;
     border-radius: 20px;
     box-shadow: 5px 5px 25px #DEB887;
+}
+
+#nav-title {
+    float: left;
+    color: white;
+    padding-top: 6px;
+    font-weight: bold;
+    font-size: 40px;
 }
