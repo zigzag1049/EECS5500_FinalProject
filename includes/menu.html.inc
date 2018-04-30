@@ -3,7 +3,7 @@
     <div id ="weatherAPI">
       <iframe src="APIweather/Weather.html"></iframe> 
     </div>
-    <div class="google-map" style = "display: inline-block;">
+    <div id="google-map" style = "display: inline-block;">
         <iframe width="200" height="300" style="border: 2px black solid; margin-top: 2%; border-radius: 15px;" 
           src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJX4yyNDZEOogRBuopvdvVXG0&amp;key=AIzaSyC-ZmtYfG8N0eNFcuYLUDWx6_tARbDCjJo" allowfullscreen>
         </iframe>

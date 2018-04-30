@@ -105,7 +105,8 @@ li a {
 #weatherAPI {
     display: inline-block;
 }
-#weatherAPI iframe {
+#weatherAPI iframe,
+#google-map iframe {
     margin-left: 5%;
     width: 600px;
     height: 140px;
