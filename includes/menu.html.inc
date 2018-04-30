@@ -3,6 +3,12 @@
     <div id ="weatherAPI">
       <iframe src="APIweather/Weather.html"></iframe> 
     </div>
+    <div class="google-map" style = "display: inline-block;">
+        <iframe width="200" height="300" style="border: 2px black solid; margin-top: 2%; border-radius: 15px;" 
+          src="https://www.google.com/maps/embed/v1/view?zoom=17&center=41.6580%2C-83.6141&key=AIzaSyC-ZmtYfG8N0eNFcuYLUDWx6_tARbDCjJo" allowfullscreen>
+        </iframe>
+        
+      </div>	
     <nav id="main-navigation">
       <ul>
         <li style="float: left; color: white; padding-top: 6px; Font-weight: Bold; Font-size: 40px;">Coaster Coast</li><!--
