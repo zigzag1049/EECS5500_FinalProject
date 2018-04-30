@@ -16,7 +16,7 @@ window.onload = function() {
    document.getElementById("SeniorPass").innerHTML = localStorage.dailyAdminSeniorPrice;
    document.getElementById("SeasonPass").innerHTML = localStorage.seasonPassPrice;
 
-   document.getElementById("login").onclick = login;
+   document.getElementById("loginBtn").onclick = login;
    for (var i = 0; i < document.getElementsByClassName("priceChg").length; i++)
       document.getElementsByClassName("priceChg")[i].onclick = changePrice;
 }
